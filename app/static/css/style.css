@@ -1,0 +1,7 @@
+.form-text {
+  display: none;
+}
+
+th[scope="col"] {
+  font-weight: bold;
+}

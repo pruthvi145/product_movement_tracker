@@ -1,0 +1,48 @@
+{% set navigation_bar = [ 
+  ('/', 'index', 'Home'), 
+  ('/product_movement', 'product-mover', 'Product Mover'), 
+  ('/products', 'products', 'Products'), 
+  ('/locations', 'locations', 'Locations') 
+  ] %} 
+
+  {% set active_page = active_page|default('index') %}
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a
+        class="navbar-brand text-center"
+        style="font-size: 12.5px; font-weight: bold;"
+        href="/"
+      >
+        PRODUCT MOVEMENT
+        <br />
+        <span style="font-size: 30px;">TRACKER</span></a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarColor01"
+        aria-controls="navbarColor01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav ms-auto">
+          {% for href, id, caption in navigation_bar %}
+          <li class="nav-item">
+            <a
+              class="nav-link {% if id == active_page %} active {% endif %}"
+              href="{{ href|e }}"
+              >{{ caption|e }}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

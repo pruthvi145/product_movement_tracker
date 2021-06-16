@@ -1,0 +1,118 @@
+{% extends "base.jinja" %}{% set active_page = "product-mover" %} {% block content %}
+<div class="main-content my-5">
+<div class="container mt-4">
+
+  <div class="row">
+   <div class="col-md-6 m-auto">
+      <h2 class="mb-5 text-center">Add Product Movement Transaction</h2>
+      <form action="" method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+          {{ form.product_id.label(class="col-form-label") }}
+
+          {% if form.product_id.errors|length > 0 %} 
+            {{ form.product_id(class="fstdropdown-select form-control is-invalid") }} 
+            <div class="invalid-feedback">
+              {{ form.product_id.errors[0] }}
+            </div>
+            {% else %} 
+                {{ form.product_id(class="fstdropdown-select form-control") }} 
+            {% endif %}
+        </div>
+        <div class="form-group mt-3">
+          {{ form.from_location_id.label(class="col-form-label") }}
+
+          {% if form.from_location_id.errors|length > 0 %} 
+            {{ form.from_location_id(class="fstdropdown-select form-control is-invalid") }} 
+            <div class="invalid-feedback">
+              {{ form.from_location_id.errors[0] }}
+            </div>
+            {% else %} 
+                {{ form.from_location_id(class="fstdropdown-select form-control") }} 
+            {% endif %}
+        </div>
+        <div class="form-group mt-3">
+          {{ form.to_location_id.label(class="col-form-label") }}
+
+            {% if form.to_location_id.errors|length > 0 %} 
+            {{ form.to_location_id(class="fstdropdown-select form-control is-invalid") }} 
+            <div class="invalid-feedback">
+              {{ form.to_location_id.errors[0] }}
+            </div>
+            {% else %} 
+                {{ form.to_location_id(class="fstdropdown-select form-control") }} 
+            {% endif %}
+          
+        </div>
+
+        <div class="form-group mt-3">
+          {{ form.qty.label(class="col-form-label") }}
+
+            {% if form.qty.errors|length > 0 %} 
+            {{ form.qty(type="number",class="form-control is-invalid") }} 
+            <div class="invalid-feedback">
+              {{ form.qty.errors[0] }}
+            </div>
+            {% else %} 
+                {{ form.qty(type="number",class="form-control") }} 
+            {% endif %}
+        </div>
+        <div class="d-flex">
+          <button
+            type="submit"
+            class="btn btn-primary mt-5 text-center mx-auto w-100"
+          >
+            Add Transaction
+          </button>
+        </div>
+      </form>
+    </div>
+<div class="col-md-12 mt-5 pt-5">
+  <h2>All Movements <sup>Debugging</sup></h2>
+    {% if product_movements|length > 0 %}
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Product Name</th>
+              <th scope="col">From</th>
+              <th scope="col">To</th>
+              <th scope="col">Qty</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for movement in product_movements %}
+            <tr>
+              <th scope="row">{{ movement.id }}</th>
+              <td>{{ movement.product.name }}</td>
+              <td>{{ movement.from_location.name }}</td>
+              <td>{{ movement.to_location.name }}</td>
+              <td>{{ movement.qty }}</td>
+              <td>
+              <form action="/product_movement/delete" method="POST">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  {# <a
+                    href="/product_movement/{{movement.id}}"
+                    class="btn btn-sm btn-outline-primary"
+                  >
+                    Edit
+                  </a> #}
+                  <br/>
+                  <button type="submit" class="btn btn-sm btn-outline-danger" name="product_movement_id" value="{{movement.id}}">Delete</button>
+                </div>
+                </form>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+        <h5 class="text-info text-center mt-5">No movement made yet! Please make some trasactions.</h5>
+        {% endif %}
+      </div>
+   
+  </div>
+</div>
+</div>
+{% endblock %}
