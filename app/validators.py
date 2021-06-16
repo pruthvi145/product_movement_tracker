@@ -10,6 +10,5 @@ class SelectionRequired:
         self.message = message
 
     def __call__(self, form, field):
-        print(type(field.data))
         if field.data == -1:
             raise ValidationError(self.message)

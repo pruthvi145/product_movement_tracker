@@ -1,5 +1,4 @@
 # Product Movement Tracker
----
 
 Flask Application to track the movement of the product between multiple locations
 
@@ -8,21 +7,26 @@ Flask Application to track the movement of the product between multiple location
 Product Movement Tracker is a web-based application that keeps track of the movement of the product. In Retail businesses many times different products stored at different physical locations. This application will help them to track the products transactions between these locations
 
 ## Features
-* Product Management
-* Location Management
-* Transactions Logger
-* Report
+* **Product Management** - Create, Edit, Delete Products
+* **Location Management** - Create, Edit, Delete Locations
+* **Transactions Logger** - Create, Delete Product Movement Transactions
+* **Report** - gives the overview of product quantities to the respective location
 
 
-## Technology Used
-* Python (Programming Language)
-* Flask - Micro Framework
+## Technologies Used
+* Python - Programming Language
+* Flask - Framework
 * Jinja2 - Templating Engine
 * SQLLite - Database
 * Flask-SQLalchemy - SQL ORM
 
+## Future Improvements
+- [ ] Separate routes and models in a different modules
+- [ ] Error Handling - Give proper user feedback if something goes wrong
+- [ ] Feature: Add edit Product Movement feature
+
 ## Demo:
-[ ] TODO: Add Screenshots
+- [ ] TODO: Add Screenshots
 
 # Developement Setup
 ## Virtual Environment (optional)
@@ -48,7 +52,7 @@ $ pip install -r requirements.txt
 
 ## Flask Application Structure 
 
-[ ] TODO: add folder structure
+- [ ] TODO: add folder structure
 
 
 ## Flask Configuration
