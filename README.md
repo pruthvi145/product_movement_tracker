@@ -20,18 +20,28 @@ Product Movement Tracker is a web-based application that keeps track of the move
 * SQLLite - Database
 * Flask-SQLalchemy - SQL ORM
 
+### Screenshots
+#### Home - Report
+![image](https://user-images.githubusercontent.com/43115036/146883045-033ce56e-63dc-4fc3-af47-3c071b79c9fb.png)
+
+#### Product Movements
+![image](https://user-images.githubusercontent.com/43115036/146883219-3216e429-ecf7-431f-a7b7-179aab5c27ac.png)
+![image](https://user-images.githubusercontent.com/43115036/146883251-187cfcb4-b24f-4717-964f-1a84008643cb.png)
+
+#### Products
+![image](https://user-images.githubusercontent.com/43115036/146883105-d2e57439-30a7-4d3b-a26b-0a453a840388.png)
+
+#### Locations
+![image](https://user-images.githubusercontent.com/43115036/146883147-a6c5d6d0-3de9-4b66-a35e-1030444a6ab9.png)
+
+
+
+
+
 ### Future Improvements
 - [ ] Separate routes and models in a different modules
 - [ ] Error Handling - Give proper user feedback if something goes wrong
 - [ ] Feature: Add edit Product Movement feature
-
-
-## Flask Application Structure 
-
-- [ ] TODO: add folder structure
-
-### Demo:
-- [ ] TODO: Add Screenshots
 
 ---
 
