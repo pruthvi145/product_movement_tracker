@@ -25,8 +25,9 @@ Product Movement Tracker is a web-based application that keeps track of the move
 ![image](https://user-images.githubusercontent.com/43115036/146883045-033ce56e-63dc-4fc3-af47-3c071b79c9fb.png)
 
 #### Product Movements
-![image](https://user-images.githubusercontent.com/43115036/146883219-3216e429-ecf7-431f-a7b7-179aab5c27ac.png)
 ![image](https://user-images.githubusercontent.com/43115036/146883251-187cfcb4-b24f-4717-964f-1a84008643cb.png)
+![image](https://user-images.githubusercontent.com/43115036/146883219-3216e429-ecf7-431f-a7b7-179aab5c27ac.png)
+
 
 #### Products
 ![image](https://user-images.githubusercontent.com/43115036/146883105-d2e57439-30a7-4d3b-a26b-0a453a840388.png)
